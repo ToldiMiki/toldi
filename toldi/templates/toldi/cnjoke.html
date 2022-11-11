@@ -1,0 +1,43 @@
+{% extends "toldi/layout.html" %}
+{% block title %}
+    Chuck Norris jokes
+{% endblock %}
+{% block content %}
+    <form method="POST" class="cnjoke-form">
+        {% csrf_token %}
+        <button type="submit" class="save btn btn-default">Kérlek mondj egy Chuck Norris viccet!</button>
+    </form>
+    {% if joke_list %}
+    <table class="joke_list">
+        <thead>
+        <tr>
+            <th>Chuck Norris viccek:</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for joke in joke_list %}
+            <tr>
+                <td>
+                    {% if joke.errorMsg %} <hr/>error: {{ joke.errorMsg }} 
+                    {% elif joke.theJoke %} <hr/>{{ joke.theJoke }} 
+                    {% else %} <hr/>{{ joke.jokeEN }}<br/>{{ joke.jokeHU }}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Még nem kértél le egy viccet se...</p>
+    {% endif %}
+{% endblock %}
+{% comment "first version" %}
+<!-- 
+                <td>{{ joke.jokeEN }}<br/>{{ joke.jokeHU }}</td>
+        {{ form.as_p }}
+<p>
+    <label for="id_theJoke">TheJoke:</label>
+    <input type="text" name="theJoke" maxlength="1000" required="" id="id_theJoke">
+</p>
+-->
+{% endcomment %}

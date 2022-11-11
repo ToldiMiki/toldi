@@ -1,0 +1,58 @@
+{% extends "toldi/layout.html" %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+<!-- <img src="{% static "toldi\images\Toldifilm_1080p_02.jpg" %}" alt="My image"> 
+img src={% static 'toldi\images\Toldifilm_1080p_02.jpg' %} alt="Arany János portré" 
+    style="float:center; background-repeat:no-repeat; background-attachment:fixed; background-size:cover;">
+div style="background-image: url(% static 'toldi\images\Toldifilm_1080p_02.jpg' no-repeat center center fixed %});">
+div class="toldi_bgimg" 
+-->
+    {% if not joke_list %}
+        <p>Még nem kértél egy viccet se. ---> <a href="{% url 'cnjoke' %}">itt kérhetsz</a></p>
+    {% endif %}
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td style="vertical-align:top;">
+                    <p><p><p>
+                        <img src={% static 'toldi\images\AranyJános_med.jpg' %} alt="Arany János portré" style="float:left;">
+                    </p></p></p>
+                </td>
+                <td style="vertical-align:top;text-align:left;">
+                    <p><strong><a href='https://mek.oszk.hu/00500/00597/html/toldi01.htm' target="_blank">Arany János: Toldi</a></strong></p>
+                    <p>
+                      Mint ha pásztortűz ég őszi éjszakákon,<br>
+                    Messziről lobogva tenger pusztaságon:<br>
+                    Toldi Miklós képe úgy lobog fel nékem<br>
+                    Majd kilenc-tíz ember-öltő régiségben.<br>
+                      Rémlik, mintha látnám termetes növését,<br>
+                    Pusztító csatában szálfa-öklelését,<br>
+                    Hallanám dübörgő hangjait szavának,<br>
+                    Kit ma képzelnétek Isten haragjának.<br>
+                    <br>
+                      Ez volt ám az ember, ha kellett, a gáton,<br>
+                    Nem terem ma párja hetedhét országon;<br>
+                    Ha most feltámadna s eljőne közétek,<br>
+                    Minden dolgát szemfényvesztésnek hinnétek.<br>
+                      Hárman sem birnátok súlyos buzogányát,<br>
+                    Parittyaköveit, öklelő kopjáját,<br>
+                    Elhülnétek, látva rettenetes pajzsát,<br>
+                    És kit a csizmáján viselt, sarkantyúját.
+                    </p>
+                </td>
+                <td style="width:50px">
+                </td>
+                <td style="vertical-align:top;text-align:center;">
+                    <p><a href='https://www.mma.hu/77/-/event/10180/mozikba-kerul-a-toldi' target="_blank">
+                        <strong>Toldi</strong> - a mozifilm 2022. Jankovics Marcell utolsó alkotása</a></p>
+                    <img src="{% static "toldi\images\Toldifilm_1080p_02_small.jpg" %}" alt="My image";width:200px;>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
