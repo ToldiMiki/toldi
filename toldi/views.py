@@ -1,13 +1,13 @@
-from requests.auth import HTTPBasicAuth
+import json
+
+import requests
 from django.shortcuts import redirect, render
 from django.utils.timezone import datetime
 from django.views.generic import ListView
-import requests
-import json
-from toldi.forms import LogMessageForm
-from toldi.models import LogMessage
-from toldi.forms import CNjokeForm
-from toldi.models import CNjoke
+from requests.auth import HTTPBasicAuth
+
+from toldi.forms import CNjokeForm, LogMessageForm
+from toldi.models import CNjoke, LogMessage
 
 """from django. import requests
 
