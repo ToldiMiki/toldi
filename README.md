@@ -4,3 +4,5 @@ Készítette: PeGe
 
   #célja:
 tanulmányok készítése a WebMaster megismeréséhez. (tanulmányi homokozó)
+
+létrehoztam a próba-branch -et. csak az állatorvosi ló kedvéért ;)
