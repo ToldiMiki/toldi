@@ -31,8 +31,10 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    #'vscode-django-tutorial.azurewebsites.net'  # Sample name only!
-    'toldi.azurewebsites.net'
+    'toldi.azurewebsites.net',
+    'env324825.int-aws-de.webmethods.io',
+    '*.azurewebsites.net',
+    '*.webmethods.io',
 ]
 
 # Application definition
