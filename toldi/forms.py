@@ -13,3 +13,9 @@ class CNjokeForm(forms.ModelForm):
     class Meta:
         model = CNjoke
         fields = ("jokeEN","jokeHU",)  # NOTE: the trailing comma is required
+
+
+"""class CountryForm(forms.ModelForm):
+    class Meta:
+        model = Country
+        fields = ("country",) """

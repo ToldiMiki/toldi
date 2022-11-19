@@ -1,0 +1,30 @@
+{% extends "toldi/layout.html" %}
+{% load static %}
+{% block title %}
+    Load Country Data
+{% endblock %}
+{% block content %}
+<form method="post">  <!--  action="country"> --> 
+    {% csrf_token %}
+    <p>
+      <label for="name">Melyik ország adatai érdekelnek? </label>
+      <input type="text" id="name" name="name" style="max-width: 256px;"><br>
+      <button type="submit" class="save btn btn-default">Kérem a részleteket!</button>
+    </p>
+    <hr>
+</form>
+<p>
+  {% if countryName %} 
+  <table>
+    <tbody>
+      <tr><td>Ország:</td><td>{{ countryName }}</td></tr>
+      <tr><td>Népesség:</td><td>{{ countryPopulation }} fő</td></tr>
+      <tr><td>Főváros:</td><td>{{ countryCapital }}</td></tr>
+      <tr><td>Pénznem:</td><td>{{ countryCurrency }}</td></tr>
+    </tbody>
+  </table>
+  {% elif error %} 
+    Error: {{ error }}
+  {% endif %}
+</p>
+{% endblock %}

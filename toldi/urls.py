@@ -23,6 +23,7 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("cnjoke/", views.cnjoke, name="cnjoke"), #cnjoke_list_view, name="cnjoke"),
     path("cnjok1/", cnjoke_list_view, name="cnjok1"),
+    path("country/", views.country, name="country"),
     path("log/", views.log_message, name="log"),
     path("admin/", admin.site.urls),
 ]

@@ -26,3 +26,14 @@ class CNjoke(models.Model):
         elif self.jokeEN or self.jokeHU : return f"ENG:'{self.jokeEN}' HUN:'{self.jokeHU}'"
         else: return "unnown error"
     
+
+"""COUNTRY_CHOICES = (
+    ('Magyarország','HU'),
+    ('Anglia', 'GB'),
+    ('Lengyelország','PL'),
+    ('Spanyolország','SP'),
+)
+
+
+class Country(models.Model):
+    theCountry = models.CharField( choices=COUNTRY_CHOICES )"""
