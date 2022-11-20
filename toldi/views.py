@@ -1,14 +1,12 @@
 import json
 import locale
 import requests
-from xml.dom.minidom import parseString
 import xml.etree.ElementTree as ET
 from django.shortcuts import redirect, render
 from django.utils.timezone import datetime
 from django.views.generic import ListView
 from requests.auth import HTTPBasicAuth
 from django.views.decorators.csrf import csrf_exempt
-from pysimplesoap.client import SoapClient
 
 from toldi.models import CNjoke, LogMessage  #, Country
 from toldi.forms import CNjokeForm, LogMessageForm  #, CountryForm
